@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main_body %}
+  <h1>Madlibs</h1>
+
+  <form action='/story'>
+    {% for word in words %}
+      <div>
+        <label for ={{word}}>{{word.capitalize()}}</label>
+        <input type="text" name={{word}}>
+      </div>
+    {% endfor %}
+    <button>Submit</button>
+  </form>
+{% endblock %}

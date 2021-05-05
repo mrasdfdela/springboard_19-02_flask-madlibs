@@ -44,10 +44,10 @@ story = Story(
        large {adjective} {noun}. It loved to {verb} {plural_noun}."""
 )
 
-print(story.generate({
-  "place":"Taiwan",
-  "adjective":"zoomy",
-  "noun":"ringpop",
-  "verb":"fall",
-  "plural_noun":"geese"
-}))
+# print(story.generate({
+#   "place":"Taiwan",
+#   "adjective":"zoomy",
+#   "noun":"ringpop",
+#   "verb":"fall",
+#   "plural_noun":"geese"
+# }))
