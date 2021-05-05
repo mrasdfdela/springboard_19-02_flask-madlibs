@@ -18,9 +18,9 @@ class Story:
         'I love to eat a good mango.'
     """
 
-    def __init__(self, words, text):
+    def __init__(self, title, words, text):
         """Create story with words and template text."""
-
+        self.title = title
         self.prompts = words
         self.template = text
 
@@ -38,16 +38,17 @@ class Story:
 # Here's a story to get you started
 
 
-story = Story(
+fairy_tail = Story(
+    "fairy_tail",
     ["place", "noun", "verb", "adjective", "plural_noun"],
     """Once upon a time in a long-ago {place}, there lived a
        large {adjective} {noun}. It loved to {verb} {plural_noun}."""
 )
 
-# print(story.generate({
-#   "place":"Taiwan",
-#   "adjective":"zoomy",
-#   "noun":"ringpop",
-#   "verb":"fall",
-#   "plural_noun":"geese"
-# }))
+dad_libs = Story(
+  "dad_libs",
+  ["local_place","word_starting_with_H","verb","other_verb","occupation","type_of_business"],
+  """Grandpa was born here in St. Louis at {local_place} in 1949. His middle initial is H., which stands for {word_starting_with_H}. In elementary school, he loved to play baseball, {verb}, and {other_verb} with his friends.In college he studied to become a(n) {occupation} because he wanted to work in the local {type_of_business} along with your Great-grandma Ellen."""
+)
+
+story_bank = [fairy_tail,dad_libs]

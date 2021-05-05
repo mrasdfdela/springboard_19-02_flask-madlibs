@@ -3,13 +3,13 @@
 {% block main_body %}
   <h1>Madlibs</h1>
 
-  <form action='/story'>
-    {% for word in words %}
-      <div>
-        <label for ={{word}}>{{word.capitalize()}}</label>
-        <input type="text" name={{word}}>
-      </div>
-    {% endfor %}
+  <form action='/form'>
+    <input list="templates" name="template">
+    <datalist id="templates">
+      {% for story in story_bank %}
+      <option value="{{story.title}}"></option>
+      {% endfor %}
+    </datalist>
     <button>Submit</button>
   </form>
 {% endblock %}
